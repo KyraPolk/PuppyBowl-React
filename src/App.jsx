@@ -4,6 +4,9 @@ import Nav from './Nav'
 import Homepage from './Homepage'
 import Puppies from './Puppies'
 import { Routes, Route } from 'react-router-dom'
+import SinglePuppy from './SinglePuppy'
+
+
 function App() {
 
   return (
@@ -13,6 +16,7 @@ function App() {
     <Routes>
       <Route path='/' element={<Homepage/>}/>
       <Route path='/puppies' element={<Puppies/>}/>
+      <Route path='/puppies/:id'element={<SinglePuppy/>}/>
     </Routes>
   </div>
   )

@@ -1,5 +1,6 @@
 import axios from "axios"
 import { useState, useEffect} from 'react'
+import { Link } from 'react-router-dom'
 
 
 const Puppies = () => {
@@ -23,7 +24,7 @@ return(
       puppies.map((puppy) => {
         return(
           <div key= {puppy.id}>
-            {puppy.name}
+            <Link to={`/puppies/${puppy.id}`}>{puppy.name}</Link>
           </div>
         )
       })
